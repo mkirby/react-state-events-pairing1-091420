@@ -19,3 +19,12 @@ Below you will find an example gif
 
 
 ![dog gif](state-pairing-gif.gif)
+
+
+# Advanced React State and Events Deliverables
+Go back to our morning pairing lab and do the following after watching the video:
+1. Change the "bark" button on DogCard to a "favorite" button
+2. The DogCard component will no longer render a new `<h2>` when the button is clicked
+3. Create a FavoriteContainer
+4. When a user clicks on the "favorite" button for a dog, that dog should be added to the FavoriteContainer
+5. BONUS: figure out how to add multiple dogs to the FavoriteContainer

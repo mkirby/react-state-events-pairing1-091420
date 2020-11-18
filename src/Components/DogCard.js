@@ -5,8 +5,8 @@ class DogCard extends React.Component {
     clicked: false
   }
 
-  clickHandler = () => {
-    this.setState({clicked: !this.state.clicked}, () => console.log("barked"))
+  handleFavoriteDog = () => {
+    this.setState({clicked: !this.state.clicked}, () => this.props.favoriteDog(this.props.dog, this.state.clicked))
   }
 
   render() {
@@ -17,13 +17,12 @@ class DogCard extends React.Component {
         <img alt={this.props.dog.name} src={this.props.dog.img} />
       </span>
       <span className="bark">
-        <button onClick={this.clickHandler}>Bark</button>
+        <button onClick={this.handleFavoriteDog}>Favorite</button>
       </span>
-      {this.state.clicked ? <h3>Bark</h3> : null}
+      {this.state.clicked ? <h3>Bark</h3> : <h3>Love Me Plz</h3>}
     </div>
   );
   }
-  
 }
 
 export default DogCard;
